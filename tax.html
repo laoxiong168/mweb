@@ -4,37 +4,44 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/login.js"></script>
     <script>
         $(function () {
                 var salary;
                 $("#salary").keyup(function () {
                     salary = $("#salary").val();
-                    var tempCount=(salary*0.8).toFixed(2);
+                    var tempCount = (salary * 0.8).toFixed(2);
                     $("#result").val(tempCount);
-
                 })
             }
         )
     </script>
     <style>
+        body, html {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
         table {
             text-align: right;
         }
     </style>
 </head>
 <body>
+
 <div class="main" style="margin-left: 100px;margin-top: 20px">
-    <table >
+    <table>
         <tr>
             <td>工资数：</td>
             <td><input type="text" id="salary" placeholder="输入工资数" onkeyup="value=value.replace(/[^\d]/g,'')"/></td>
         </tr>
         <tr>
             <td>结果：</td>
+            <!--测试-->
             <td><input type="text" id="result" placeholder="基数"/></td>
         </tr>
     </table>
 </div>
-
+<canvas id="canvas" style="position: absolute"></canvas>
 </body>
 </html>
