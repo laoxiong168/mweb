@@ -9,7 +9,8 @@
                 var salary;
                 $("#salary").keyup(function () {
                     salary = $("#salary").val();
-                    $("#result").val(salary * 0.8);
+                    var tempCount=(salary*0.8).toFixed(2);
+                    $("#result").val(tempCount);
 
                 })
             }
@@ -23,7 +24,7 @@
 </head>
 <body>
 <div class="main" style="margin-left: 100px;margin-top: 20px">
-    <table>
+    <table >
         <tr>
             <td>工资数：</td>
             <td><input type="text" id="salary" placeholder="输入工资数" onkeyup="value=value.replace(/[^\d]/g,'')"/></td>
