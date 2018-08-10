@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+                var salary;
+                $("#salary").keyup(function () {
+                    salary = $("#salary").val();
+                    $("#result").val(salary * 0.8);
+
+                })
+            }
+        )
+    </script>
+    <style>
+        table {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<div class="main" style="margin-left: 100px;margin-top: 20px">
+    <table>
+        <tr>
+            <td>工资数：</td>
+            <td><input type="text" id="salary" placeholder="输入工资数" onkeyup="value=value.replace(/[^\d]/g,'')"/></td>
+        </tr>
+        <tr>
+            <td>结果：</td>
+            <td><input type="text" id="result" placeholder="基数"/></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
